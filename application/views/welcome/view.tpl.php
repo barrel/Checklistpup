@@ -1,27 +1,28 @@
+<div id="Content">
 
-
-<?php
-
-// Do some shit with our awesome data array
-
-	echo 'List name: '.$list_data['list_name'].'<br />';
-	$json_list = json_decode($list_data['checklist']);
-	$json_values = json_decode($list_data['set_value'], true);
-
-	$counter = 0;
-	foreach($json_list as $data) {
-		if ($json_values[$counter]== '0') {
-			echo '<div><input type="checkbox" name="checked">'.$data.'</div>';
-		} else {
-			echo '<div><input type="checkbox" name="checked" class="list-check">'.$data.'</div>';
+	<?php
+	
+		echo '<h4>'.$list_data['list_name'].'</h4>';
+		$json_list = json_decode($list_data['checklist']);
+		$json_values = json_decode($list_data['set_value'], true);
+	
+		echo '<div class="listed">';
+		$counter = 0;
+		foreach($json_list as $data) {
+			if ($json_values[$counter]== '0') {
+				echo '<div><input type="checkbox" name="checked">'.$data.'</div>';
+			} else {
+				echo '<div><input type="checkbox" name="checked" class="list-check">'.$data.'</div>';
+			}
+			$counter++;
 		}
-		$counter++;
-	}
+		echo '</div>';
+	?>
+	<input type="submit" name="edit" value="Edit">
+	<input type="submit" name="reset" value="Reset">
+	<input type="submit" name="delete" value="Delete">
 
-?>
-<input type="submit" name="edit" value="Edit">
-<input type="submit" name="reset" value="Reset">
-<input type="submit" name="delete" value="Delete">
+</div>
 
 <script>
 	// Marked correct checked boxes

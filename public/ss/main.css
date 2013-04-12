@@ -119,5 +119,10 @@ textarea {
 
 input[type="submit"] {
 	width: 20%;
+	margin-right: 15px;
+}
+
+.listed {
+	margin: 0 0 10px 10px;
 }
 
