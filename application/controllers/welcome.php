@@ -38,6 +38,14 @@ class Welcome extends MY_Controller
 		}
 	}
 	
+	function edit_list() {
+		if ($this->input->post() && $this->input->is_ajax_request()){
+			$post = $this->input->post();
+
+			echo $this->m_example->edit_list($post);
+		}
+	}
+	
 	function set_check_value() {
 		if ($this->input->post() && $this->input->is_ajax_request()){
 			$post = $this->input->post();
@@ -76,9 +84,21 @@ class Welcome extends MY_Controller
 		$this->render();
 	}
 	
-	// Render list view (http://localhost/welcome/view/12345)
+	// Render list view 
 	
 	function view($unique_id){
+		// Get the individual list data
+		
+		$this->data['list_data'] = $this->m_example->get_a_list($unique_id);
+		
+		// Render page
+		
+		$this->render();
+	}
+	
+	// Render edit view 
+	
+	function edit($unique_id){
 		// Get the individual list data
 		
 		$this->data['list_data'] = $this->m_example->get_a_list($unique_id);

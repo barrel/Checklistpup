@@ -105,7 +105,7 @@ class M_Example extends MY_Model
 		$this->db->where('unique_id', $unique);
 		$query = $this->db->get(); 
 		$results = $query->result_array(); 
-		$results = json_decode($results[0]['set_value'], true); ;
+		$results = json_decode($results[0]['set_value'], true); 
 		//$results[$which] = $set_to; 
 		$count = count($results);
 		for ($i=0; $i<$count; $i++) {
@@ -125,6 +125,14 @@ class M_Example extends MY_Model
 		}
 		
 		return 'TRUE';
+	}
+	
+	// Edit list
+	
+	function edit_list($post) {
+		$unique = $post['unique_id'];
+		
+		return $unique;
 	}
 	
 	// Set checked value

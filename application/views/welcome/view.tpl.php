@@ -4,13 +4,10 @@
 
 // Do some shit with our awesome data array
 
-//foreach ($list_data as $data){
 	echo 'List name: '.$list_data['list_name'].'<br />';
-	//print_r($list_data);
-	//echo "</br>".$list_data."whats this</br>";
 	$json_list = json_decode($list_data['checklist']);
 	$json_values = json_decode($list_data['set_value'], true);
-	//print_r($json_values);
+
 	$counter = 0;
 	foreach($json_list as $data) {
 		if ($json_values[$counter]== '0') {
@@ -20,16 +17,11 @@
 		}
 		$counter++;
 	}
-	
-	
-	//echo $json_list."<br/>";
-	//print_r($json_list);
-//}
 
 ?>
-
-<input type="submit" name="delete" value="Delete">
+<input type="submit" name="edit" value="Edit">
 <input type="submit" name="reset" value="Reset">
+<input type="submit" name="delete" value="Delete">
 
 <script>
 	// Marked correct checked boxes
@@ -37,24 +29,22 @@
 
 	// Delete list
 		$('input[name="delete"]').click(function() {
-			//var getItems = $('textarea').val();
-			//alert(getItems);
 			var getId = window.location+'';
 			getId = getId.substr(getId.length - 5);
-			alert(getId);
+			var deleteMsg = "<div id='DeleteMsg'>The list has been deleted.</div>"
+			
 			$.ajax({
 				type: 'POST',
 				url: siteUrl+"welcome/delete_list",
-				//url: "getlist.php",
 				data: { "unique_id": getId },
 				success: function(msg) {
 					if (msg){
-						//alert(msg);
-						//$('body').html('');
-						alert("List has beed deleted.");
-						window.location.href = siteUrl;
+						//alert("List has beed deleted.");
+						setTimeout(function() {
+							window.location.href = siteUrl;
+						}, 1000);
 					}else{
-						alert("effin awesome");
+						//alert("effin awesome");
 					}
 				},
 				error: function() {
@@ -74,11 +64,35 @@
 				data: { "unique_id": getId },
 				success: function(msg) {
 					if (msg){
-						alert(msg);
-						//$(".list-check").attr('checked','false');
+						//alert(msg);
 						location.reload();
 					}else{
-						alert("effin awesome");
+						//alert("effin awesome");
+					}
+				},
+				error: function() {
+					alert("no work");
+				}
+			});
+			
+			return false;
+		});
+		
+	// Edit list
+		$('input[name="edit"]').click(function() {
+			var getId = window.location+'';
+			getId = getId.substr(getId.length - 5);
+			$.ajax({
+				type: 'POST',
+				url: siteUrl+"welcome/edit_list",
+				data: { "unique_id": getId },
+				success: function(msg) {
+					if (msg){
+						//alert(msg);
+						//location.reload();
+						window.location.href = siteUrl+"edit/"+msg;
+					}else{
+						//alert("effin awesome");
 					}
 				},
 				error: function() {
@@ -101,7 +115,6 @@
 			
 			var whichOne = ($(this).parent().index())-1;
 			
-			//alert(whichOne-1);
 			$(this).toggleClass('list-check');
 			var checkClass = $(this).attr('class'); 
 			
@@ -114,7 +127,7 @@
 					if (msg){
 						//alert(msg);
 					}else{
-						alert("effin awesome");
+						//alert("effin awesome");
 					}
 				},
 				error: function() {
@@ -124,7 +137,6 @@
 			
 			// Display end message
 			var countCheck = $(".list-check").size();
-			//alert(countCheck);
 			if (countCheck == howMany) {
 				//$("IncompleteMsg").remove();
 				$('body').append(finishMsg);

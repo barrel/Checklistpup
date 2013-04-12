@@ -23,7 +23,7 @@
 				data: { "list": $('textarea').val(), "name": $('input[type=text]').val() },
 				success: function(msg) {
 					if (msg){
-						alert(msg);
+						//alert(msg);
 						window.location.href = siteUrl+"list/"+msg;
 					}else{
 						alert("effin awesome");
