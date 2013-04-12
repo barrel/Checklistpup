@@ -13,6 +13,9 @@
 	
 	<link type="text/css" rel="stylesheet" href="<?= site_url('/public/ss/reset.css'); ?>" />
 	<link type="text/css" rel="stylesheet" href="<?= site_url('/public/ss/main.css'); ?>" />
+	<link rel="stylesheet" href="<?= site_url('/public/ss/base.css'); ?>">
+	<link rel="stylesheet" href="<?= site_url('/public/ss/skeleton.css'); ?>">
+	<link rel="stylesheet" href="<?= site_url('/public/ss/layout.css'); ?>">
 	
 	<link rel="shortcut icon" href="<?= site_url('/public/favicon.ico'); ?>" />
 	
