@@ -24,7 +24,7 @@
 				success: function(msg) {
 					if (msg){
 						alert(msg);
-						window.location.href = siteUrl+"index.php/welcome/view/"+msg;
+						window.location.href = siteUrl+"list/"+msg;
 					}else{
 						alert("effin awesome");
 					}
