@@ -56,6 +56,10 @@ $route['register'] = "auth/register";
 
 $route['list/(:any)'] = "welcome/view/$1";
 
+// Edit Route Example
+
+$route['edit/(:any)'] = "welcome/edit/$1";
+
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
