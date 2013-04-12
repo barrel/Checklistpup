@@ -48,10 +48,10 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = '127.0.0.1';
-$db['default']['username'] = 'deirdre';
-$db['default']['password'] = 'GNBWTA10';
-$db['default']['database'] = 'checklistpup';
+$db['default']['hostname'] = $_SERVER['DB1_HOST'];
+$db['default']['username'] = $_SERVER['DB1_NAME'];
+$db['default']['password'] = $_SERVER['DB1_PASS'];
+$db['default']['database'] = $_SERVER['DB1_NAME'];
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
