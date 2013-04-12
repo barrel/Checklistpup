@@ -1,5 +1,7 @@
 <div id="Content">
 
+	<img src="<?= site_url('/public/logo.png'); ?>" />
+
 	<?php
 	
 		echo '<h2>'.$list_data['list_name'].'</h2>';
