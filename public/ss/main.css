@@ -104,3 +104,20 @@ p{
 	margin: 0px 0px 1.0em;
 }
 
+
+/*-----ACTUAL STYLING-----*/
+
+#Content {
+	width: 500px;
+	margin: 5% auto 0;
+	position: relative;
+}
+
+textarea {
+	width: 100%;
+}
+
+input[type="submit"] {
+	width: 20%;
+}
+

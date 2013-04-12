@@ -1,16 +1,18 @@
-<h1>Checklistpup</h1>
-<br />
-<h3>Add checklist items, one per line.</h3>
-		
-<form>
-		
-	<input type="text" name="listname">
-	<br/>
-	<textarea rows=12 cols=50></textarea>
-	<br/>
-	<input type="submit" value="Create">
+<div id="Content">
 
-</form>
+	<h1>Checklistpup</h1>
+			
+	<form>
+		<h4>Enter list name:</h4>	
+		<input type="text" name="listname">
+		<h4>Add checklist items, one per line:</h4>
+		<textarea rows=12 cols=50></textarea>
+		
+		<input type="submit" value="Create">
+	
+	</form>
+
+</div>
 
 <script>
 		$('input[type="submit"]').click(function() {
