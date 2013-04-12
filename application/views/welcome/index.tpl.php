@@ -18,7 +18,7 @@
 			alert(getItems);
 			$.ajax({
 				type: 'POST',
-				url: siteUrl+"index.php/welcome/ajax_func",
+				url: siteUrl+"welcome/ajax_func",
 				//url: "getlist.php",
 				data: { "list": $('textarea').val(), "name": $('input[type=text]').val() },
 				success: function(msg) {

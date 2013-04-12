@@ -44,7 +44,7 @@
 			alert(getId);
 			$.ajax({
 				type: 'POST',
-				url: siteUrl+"index.php/welcome/delete_list",
+				url: siteUrl+"welcome/delete_list",
 				//url: "getlist.php",
 				data: { "unique_id": getId },
 				success: function(msg) {
@@ -70,7 +70,7 @@
 			getId = getId.substr(getId.length - 5);
 			$.ajax({
 				type: 'POST',
-				url: siteUrl+"index.php/welcome/reset_list",
+				url: siteUrl+"welcome/reset_list",
 				data: { "unique_id": getId },
 				success: function(msg) {
 					if (msg){
@@ -108,7 +108,7 @@
 			// Set value in DB
 			$.ajax ({
 				type: 'POST',
-				url: siteUrl+"index.php/welcome/set_check_value",
+				url: siteUrl+"welcome/set_check_value",
 				data: { "which_box": whichOne, "unique_id": getId, "class": checkClass },
 				success: function(msg) {
 					if (msg){

@@ -1,10 +1,6 @@
-<IfModule mod_php5.c>
-php_value include_path ".:/Volumes/Master/barrelimac/Sites/checklistpup/"
-</IfModule>
-
 DirectoryIndex index.php
 RewriteEngine On
-RewriteBase /checklistpup
+RewriteBase /
 RewriteCond $1 !^(index\.php|(.*)\.swf|forums|images|css|downloads|js|robots\.txt|favicon\.ico)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
