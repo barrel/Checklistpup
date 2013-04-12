@@ -118,15 +118,15 @@ p{
 }
 
 h2 {
-	font-family: Helvetica;
-	color: #333333;
-	font-size: 34px;
+	font-family: Helvetica !important;
+	color: #333333 !important;
+	font-size: 34px !important;
 }
 
 h4 {
-	font-family: Helvetica;
-	color: #333333;
-	font-size: 18px;
+	font-family: Helvetica !important;
+	color: #333333 !important;
+	font-size: 18px !important;
 }
 
 textarea {
