@@ -52,6 +52,7 @@ class M_Example extends MY_Model
 		$unique = substr($unique, -5);
 		
 		$name = $post["name"];
+		
 		$values = array();
 		for ($i=0; $i<$count; $i++) {
 			$values[$i] = "0"; 
@@ -133,6 +134,44 @@ class M_Example extends MY_Model
 		$unique = $post['unique_id'];
 		
 		return $unique;
+	}
+	
+	// Update list
+	
+	function update_list($post) {
+		$unique = $post['unique_id'];
+	
+		$name = $post['name'];
+		
+		$list = $post["list"];
+		$list = explode("\n", $list);
+		$count = count($list);
+		$jsoned = json_encode($list, JSON_FORCE_OBJECT);
+		
+		$values = array();
+		for ($i=0; $i<$count; $i++) {
+			$values[$i] = "0"; 
+		}
+		$jsoned_values = json_encode($values, JSON_FORCE_OBJECT);
+		
+		// Query
+		
+		$data = array(
+			'checklist' => $jsoned,
+			'list_name' => $name,
+			'set_value' => $jsoned_values
+		);
+		
+		// Update to database
+
+		$this->db->where('unique_id', $unique);
+		if (!$this->db->update('example_table', $data)){
+			return 'FALSE';	
+		}
+		
+		$output = $unique;
+		
+		return $output;
 	}
 	
 	// Set checked value

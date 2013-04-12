@@ -46,6 +46,14 @@ class Welcome extends MY_Controller
 		}
 	}
 	
+	function update_list() {
+		if ($this->input->post() && $this->input->is_ajax_request()){
+			$post = $this->input->post();
+
+			echo $this->m_example->update_list($post);
+		}
+	}
+	
 	function set_check_value() {
 		if ($this->input->post() && $this->input->is_ajax_request()){
 			$post = $this->input->post();
