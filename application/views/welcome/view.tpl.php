@@ -105,8 +105,7 @@
 		});
 	
 	// Count checkboxes
-		var finishMsg = "<div id='FinishMsg'>Congratulations! You completed the list!</div>"
-		var incompleteMsg = "<div id='IncompleteMsg'>Looks like you still have some stuff to do.</div>";
+		var finishMsg = "<h4 id='FinishMsg'>Congratulations! You completed the list!</h4>"
 		var howMany = $("input[type=checkbox]").size();
 		
 		//alert(howMany);
@@ -140,7 +139,7 @@
 			var countCheck = $(".list-check").size();
 			if (countCheck == howMany) {
 				//$("IncompleteMsg").remove();
-				$('body').append(finishMsg);
+				$('#Content').append(finishMsg);
 			} else {
 				$("#FinishMsg").remove();
 				//$("body").append(incompleteMsg);
