@@ -1,6 +1,6 @@
 <div id="Content">
 
-	<h1>Checklistpup</h1>
+	<img src="<?= site_url('/public/logo.png'); ?>" />
 			
 	<form>
 		<h4>Enter list name:</h4>
