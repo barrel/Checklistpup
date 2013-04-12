@@ -111,8 +111,6 @@ p{
 	width: 500px;
 	margin: 5% auto 0;
 	position: relative;
-	font-family: Helvetica;
-	color: #333333;
 }
 
 #Content img {
@@ -120,6 +118,14 @@ p{
 }
 
 h2 {
+	font-family: Helvetica;
+	color: #333333;
+	font-size: 34px;
+}
+
+h4 {
+	font-family: Helvetica;
+	color: #333333;
 	font-size: 18px;
 }
 
