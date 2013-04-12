@@ -1,23 +1,25 @@
-<h1>Checklistpup</h1>
-<br />
-<h3>Add checklist items, one per line.</h3>
-		
-<form>
-		
-	<input type="text" name="listname" value="<?php echo $list_data['list_name'] ?>">
-	<br/>
-	<textarea rows=12 cols=50><?php 
-			$json_list = json_decode($list_data['checklist']); 
-			
-			foreach($json_list as $data) {
-				echo $data."\n";
-			}
-	
-		?></textarea>
-	<br/>
-	<input type="submit" value="Edit" name="edit">
+<div id="Content">
 
-</form>
+	<h1>Checklistpup</h1>
+			
+	<form>
+		<h4>Enter list name:</h4>
+		<input type="text" name="listname" value="<?php echo $list_data['list_name'] ?>">
+		<h4>Add checklist items, one per line:</h4>
+		<textarea rows=12 cols=50><?php 
+				$json_list = json_decode($list_data['checklist']); 
+				
+				foreach($json_list as $data) {
+					echo $data."\n";
+				}
+		
+			?></textarea>
+		
+		<input type="submit" value="Edit" name="edit">
+	
+	</form>
+
+</div>
 
 <script>
 		$('input[name="edit"]').click(function() {

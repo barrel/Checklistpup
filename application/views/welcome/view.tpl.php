@@ -2,7 +2,7 @@
 
 	<?php
 	
-		echo '<h4>'.$list_data['list_name'].'</h4>';
+		echo '<h2>'.$list_data['list_name'].'</h2>';
 		$json_list = json_decode($list_data['checklist']);
 		$json_values = json_decode($list_data['set_value'], true);
 	
