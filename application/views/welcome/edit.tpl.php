@@ -11,7 +11,7 @@
 			$json_list = json_decode($list_data['checklist']); 
 			
 			foreach($json_list as $data) {
-				echo $data.'</br>';
+				echo $data.'<br/>';
 			}
 	
 		?>
