@@ -1,0 +1,106 @@
+/*-----GLOBAL CSS-----*/
+
+body{
+	color: #000;
+	font-family: Arial, Verdana, sans-serif;
+	font-size: 62.5%;
+	margin: 0px auto;
+	background-color: #FFF;
+}
+
+a:link, a:active, a:visited{
+	color: #FF0000;
+	text-decoration: none;
+	outline: none;
+}
+
+a:hover, a:visited:hover{
+	text-decoration: underline;
+}
+
+a.img:link, a.img:active, a.img:visited, a.img:hover, a.img:visited:hover{
+	border: none;
+}
+
+img{
+	vertical-align: bottom;
+}
+
+.empty{
+	line-height: 0px;
+	display: none;
+}
+
+.hidden{
+	visibility: hidden;
+}
+
+.floatleft{
+	float: left;
+}
+
+.floatright{
+	float: right;
+}
+
+.floatcenter{
+	clear: both;
+	margin: 0px auto;
+}
+
+
+/*-----CLEAR CSS-----*/
+
+.clear:before,
+.clear:after{
+	content: '';
+	display: table;
+}
+
+.clear:after{
+	clear: both;
+}
+
+.clear{
+	*zoom: 1;
+}
+
+
+/*-----HEADINGS CSS-----*/
+
+h1{
+	font-size: 2.4em;
+	font-weight: bold;
+}
+
+h2{
+	font-size: 1.8em;
+	font-weight: bold;
+}
+
+h3{
+	font-size: 1.4em;
+	font-weight: bold;
+}
+
+h4{
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+h5{
+	font-size: 1.0em;
+	font-weight: bold;
+}
+
+h6{
+	font-size: 0.8em;
+	font-weight: bold;
+}
+
+p{
+	font-size: 1.2em;
+	line-height: 1.4em;
+	margin: 0px 0px 1.0em;
+}
+

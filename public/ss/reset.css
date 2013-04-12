@@ -1,0 +1,84 @@
+/*-----RESET CSS-----*/
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video{
+	font-size: 100%;
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	outline: 0px;
+	background: transparent;
+	vertical-align: baseline;
+}
+
+body{
+	line-height: 1;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{ 
+	display: block;
+}
+
+ol, ul{
+	list-style: none;
+}
+
+blockquote, q{
+	quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+
+a{
+	margin: 0px;
+	padding: 0px;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+/* Change colors to suit your needs */
+ins{
+	color: #000;
+	background-color: #FF9;
+	text-decoration: none;
+}
+
+/* Change colors to suit your needs */
+mark{
+	color: #000;
+	background-color: #FF9;
+	font-style: italic;
+	font-weight: bold;
+}
+
+del{
+	text-decoration: line-through;
+}
+
+abbr[title], dfn[title]{
+	border-bottom: 1px dotted;
+	cursor: help;
+}
+
+table{
+	border-collapse: collapse;
+	border-spacing: 0px;
+}
+
+/* Change border color to suit your needs */
+hr{
+	height: 1px;
+	margin: 1em 0px;
+	padding: 0px;
+	display: block;
+	border: 0px;
+	border-top: 1px solid #CCC;
+}
+
+input, select{
+	vertical-align: middle;
+}
+
