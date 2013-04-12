@@ -111,6 +111,16 @@ p{
 	width: 500px;
 	margin: 5% auto 0;
 	position: relative;
+	font-family: Helvetica;
+	color: #333333;
+}
+
+#Content img {
+	margin-left: -6px;
+}
+
+h2 {
+	font-size: 18px;
 }
 
 textarea {
