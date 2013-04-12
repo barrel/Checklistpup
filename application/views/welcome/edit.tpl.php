@@ -23,11 +23,13 @@
 		$('input[name="edit"]').click(function() {
 			var getId = window.location+'';
 			getId = getId.substr(getId.length - 5);
+			var getItems = $('textarea').val();
+			getItems = $.trim(getItems);
 			$.ajax({
 				type: 'POST',
 				url: siteUrl+"welcome/update_list",
 				//url: "getlist.php",
-				data: { "list": $('textarea').val(), "name": $('input[type=text]').val(), "unique_id": getId },
+				data: { "list": getItems, "name": $('input[type=text]').val(), "unique_id": getId },
 				success: function(msg) {
 					if (msg){
 						//alert(msg);

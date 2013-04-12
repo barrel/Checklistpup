@@ -15,12 +15,13 @@
 <script>
 		$('input[type="submit"]').click(function() {
 			var getItems = $('textarea').val();
-			alert(getItems);
+			getItems = $.trim(getItems);
+			//alert(getItems);
 			$.ajax({
 				type: 'POST',
 				url: siteUrl+"welcome/ajax_func",
 				//url: "getlist.php",
-				data: { "list": $('textarea').val(), "name": $('input[type=text]').val() },
+				data: { "list": getItems, "name": $('input[type=text]').val() },
 				success: function(msg) {
 					if (msg){
 						//alert(msg);
